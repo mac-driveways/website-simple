@@ -1138,7 +1138,11 @@
               within regulated waterways are not included unless specifically arranged.
             </div>
 
-            <div><a class="button" href="#contact">Request a Driveway Evaluation</a></div>
+            <div>
+              <a class="button" href="#contact" data-service="Driveway drainage improvements">
+                Request a Drainage Evaluation
+              </a>
+            </div>
           </div>
         </article>
 
@@ -1177,7 +1181,9 @@
               quantity, truck access, and current road and site conditions.
             </div>
 
-            <div><a class="button" href="#contact">Ask About Delivery</a></div>
+            <div>
+              <a class="button" href="#contact" data-service="Gravel delivery">Ask About Delivery</a>
+            </div>
           </div>
         </article>
       </div>
@@ -1399,7 +1405,7 @@
   <footer>
     <div class="footer-inner">
       <div>© <span id="year"></span> Macleod Driveway & Stone. All rights reserved.</div>
-      <div>Driveway Stone • Drainage Improvements • Gravel Delivery • Light Excavation</div>
+      <div>Driveway Stone • Drainage Improvements • Gravel Delivery • Skid-Steer Work</div>
     </div>
   </footer>
 
@@ -1453,7 +1459,7 @@
 
     startSlideshow();
 
-    document.querySelectorAll(".service-link[data-service]").forEach((link) => {
+    document.querySelectorAll("[data-service]").forEach((link) => {
       link.addEventListener("click", () => {
         const serviceSelect = document.getElementById("service");
         serviceSelect.value = link.dataset.service;
