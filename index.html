@@ -410,30 +410,87 @@
     .service-card {
       position: relative;
       overflow: hidden;
+      padding: 0;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .service-card::after {
+    .service-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(227,31,43,0.48);
+      box-shadow: 0 20px 42px rgba(0,0,0,0.38);
+    }
+
+    .service-photo {
+      position: relative;
+      height: 150px;
+      background-size: cover;
+      background-position: center;
+      border-bottom: 3px solid var(--accent);
+    }
+
+    .service-photo::after {
       content: "";
       position: absolute;
-      right: -40px;
-      top: -40px;
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      background: rgba(227,31,43,0.12);
+      inset: 0;
+      background: linear-gradient(180deg, rgba(5,5,5,0.02), rgba(5,5,5,0.62));
     }
 
-    .service-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 14px;
+    .service-photo.stone { background-image: url("images/hero-drive.jpg"); }
+    .service-photo.delivery { background-image: url("images/gravel-delivery.jpg"); }
+    .service-photo.repair { background-image: url("images/driveway-repair.jpg"); }
+    .service-photo.spreading { background-image: url("images/tailgate-spreading.jpg"); }
+    .service-photo.skid-steer { background-image: url("images/skid-steer-work.jpg"); }
+    .service-photo.excavation { background-image: url("images/light-excavation.jpg"); }
+
+    .service-number {
+      position: absolute;
+      left: 18px;
+      bottom: -22px;
+      z-index: 2;
+      width: 58px;
+      height: 58px;
       display: grid;
       place-items: center;
-      background: rgba(227,31,43,0.18);
-      color: var(--accent);
-      font-size: 1.35rem;
-      margin-bottom: 14px;
+      border: 4px solid var(--bg-soft);
+      border-radius: 14px;
+      background: var(--accent);
+      color: var(--white);
+      font-size: 1.18rem;
       font-weight: 900;
+      letter-spacing: 0.04em;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.4);
+    }
+
+    .service-content {
+      padding: 34px 22px 22px;
+    }
+
+    .service-kicker {
+      margin-bottom: 7px;
+      color: var(--accent);
+      font-size: 0.72rem;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .service-link {
+      display: inline-block;
+      margin-top: 18px;
+      color: var(--white);
+      font-size: 0.82rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .service-link::after {
+      content: " →";
+      color: var(--accent);
+    }
+
+    .service-link:hover {
+      color: var(--accent);
     }
 
     .service-card h3,
@@ -971,51 +1028,75 @@
 
         <div class="services-grid">
           <article class="service-card">
-            <div class="service-icon">▰</div>
-            <h3>Driveway Stone</h3>
-            <p>
-              Stone for driveways, lanes, parking areas, cabin access, and rural properties.
-            </p>
+            <div class="service-photo stone" role="img" aria-label="Finished stone driveway">
+              <span class="service-number">01</span>
+            </div>
+            <div class="service-content">
+              <div class="service-kicker">Macleod Services</div>
+              <h3>Driveway Stone</h3>
+              <p>Stone for driveways, lanes, parking areas, cabin access, and rural properties.</p>
+              <a class="service-link" href="#contact" data-service="Driveway stone">Ask About This Service</a>
+            </div>
           </article>
 
           <article class="service-card">
-            <div class="service-icon">▣</div>
-            <h3>Gravel Delivery</h3>
-            <p>
-              Gravel and stone delivery for property owners who need material brought directly to the job.
-            </p>
+            <div class="service-photo delivery" role="img" aria-label="Gravel delivery by dump truck">
+              <span class="service-number">02</span>
+            </div>
+            <div class="service-content">
+              <div class="service-kicker">Macleod Services</div>
+              <h3>Gravel Delivery</h3>
+              <p>Gravel and stone delivery for property owners who need material brought directly to the job.</p>
+              <a class="service-link" href="#contact" data-service="Gravel delivery">Ask About This Service</a>
+            </div>
           </article>
 
           <article class="service-card">
-            <div class="service-icon">↗</div>
-            <h3>Driveway Repair</h3>
-            <p>
-              Help with potholes, ruts, washouts, soft spots, drainage problems, and difficult access.
-            </p>
+            <div class="service-photo repair" role="img" aria-label="Driveway repair and resurfacing">
+              <span class="service-number">03</span>
+            </div>
+            <div class="service-content">
+              <div class="service-kicker">Macleod Services</div>
+              <h3>Driveway Repair</h3>
+              <p>Help with potholes, ruts, washouts, soft spots, drainage problems, and difficult access.</p>
+              <a class="service-link" href="#contact" data-service="Driveway repair">Ask About This Service</a>
+            </div>
           </article>
 
           <article class="service-card">
-            <div class="service-icon">≋</div>
-            <h3>Stone Spreading</h3>
-            <p>
-              Spreading and shaping stone so the driveway, lane, or parking area is more usable.
-            </p>
+            <div class="service-photo spreading" role="img" aria-label="Tailgate spreading stone on a driveway">
+              <span class="service-number">04</span>
+            </div>
+            <div class="service-content">
+              <div class="service-kicker">Macleod Services</div>
+              <h3>Stone Spreading</h3>
+              <p>Spreading and shaping stone so the driveway, lane, or parking area is more usable.</p>
+              <a class="service-link" href="#contact" data-service="Stone spreading">Ask About This Service</a>
+            </div>
           </article>
 
           <article class="service-card">
-            <div class="service-icon">⛏</div>
-            <h3>Skid-Steer Work</h3>
-            <p>
-              Light grading, moving material, spreading gravel, and small site improvements.
-            </p>
+            <div class="service-photo skid-steer" role="img" aria-label="Skid-steer grading and moving material">
+              <span class="service-number">05</span>
+            </div>
+            <div class="service-content">
+              <div class="service-kicker">Macleod Services</div>
+              <h3>Skid-Steer Work</h3>
+              <p>Light grading, moving material, spreading gravel, and small site improvements.</p>
+              <a class="service-link" href="#contact" data-service="Skid-steer work">Ask About This Service</a>
+            </div>
           </article>
 
           <article class="service-card">
-            <div class="service-icon">▼</div>
-            <h3>Light Excavation</h3>
-            <p>
-              Small digging, grading, drainage, and site-preparation tasks suited to skid-steer equipment.
-            </p>
+            <div class="service-photo excavation" role="img" aria-label="Light excavation and site preparation">
+              <span class="service-number">06</span>
+            </div>
+            <div class="service-content">
+              <div class="service-kicker">Macleod Services</div>
+              <h3>Light Excavation</h3>
+              <p>Small digging, grading, drainage, and site-preparation tasks suited to skid-steer equipment.</p>
+              <a class="service-link" href="#contact" data-service="Light excavation">Ask About This Service</a>
+            </div>
           </article>
         </div>
       </div>
@@ -1376,6 +1457,13 @@
     });
 
     startSlideshow();
+
+    document.querySelectorAll(".service-link[data-service]").forEach((link) => {
+      link.addEventListener("click", () => {
+        const serviceSelect = document.getElementById("service");
+        serviceSelect.value = link.dataset.service;
+      });
+    });
 
     function getQuoteDetails() {
       const name = document.getElementById("name").value;
