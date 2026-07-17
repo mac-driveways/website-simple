@@ -11,6 +11,9 @@
     content="Macleod Driveway & Stone provides gravel delivery, driveway stone, driveway repair, skid-steer work, grading, cleanup, and rural property services around Hocking Hills."
   />
 
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="apple-touch-icon" href="images/favicon.png" />
+
   <style>
     :root {
       --bg: #050505;
@@ -735,6 +738,19 @@
       margin-top: 8px;
     }
 
+    .contact-actions {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .contact-actions .button {
+      width: 100%;
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+
     footer {
       padding: 26px 20px;
       border-top: 1px solid rgba(255,255,255,0.08);
@@ -791,7 +807,8 @@
 
       .services-grid,
       .work-grid,
-      .form-row {
+      .form-row,
+      .contact-actions {
         grid-template-columns: 1fr;
       }
 
@@ -1219,16 +1236,18 @@
         <div class="contact-card">
           <div class="eyebrow">Get a Quote</div>
 
-          <h2>Call or send project details.</h2>
+          <h2>Call, text, or email project details.</h2>
 
           <p style="color: var(--muted);">
-            For the first GitHub mockup, this form opens a text message with the quote request.
-            Later, the form can be connected to Formspree, Netlify Forms, Google Sheets,
-            or a simple CRM.
+            Fill out the form, then choose how you would like to contact us. The Text and
+            Email buttons will prepare your project details automatically, or you can call
+            to discuss the job directly.
           </p>
 
           <p>
             <strong>Phone:</strong> <a href="tel:17404158886">740-415-8886</a><br />
+            <strong>Email:</strong>
+            <a href="mailto:macleodmaterialhauling@gmail.com">macleodmaterialhauling@gmail.com</a><br />
             <strong>Business:</strong> Macleod Driveway & Stone<br />
             <strong>Established:</strong> 2017<br />
             <strong>Owned:</strong> Veteran Owned & Operated
@@ -1250,7 +1269,7 @@
 
               <div>
                 <label for="phone">Phone</label>
-                <input id="phone" name="phone" type="tel" placeholder="Your phone number" required />
+                <input id="phone" name="phone" type="tel" placeholder="Your phone number" />
               </div>
             </div>
 
@@ -1285,10 +1304,15 @@
               ></textarea>
             </div>
 
-            <button class="button" type="submit">Text Quote Request</button>
+            <div class="contact-actions">
+              <button class="button" type="submit">Text Quote</button>
+              <button class="button secondary" id="emailQuote" type="button">Email Quote</button>
+              <a class="button secondary" href="tel:17404158886">Call Now</a>
+            </div>
 
             <p class="small-note">
-              This demo form opens a text message to 740-415-8886. No information is stored on GitHub.
+              Texting works best on a mobile device. Email opens your default email program.
+              No form information is stored on this website.
             </p>
           </form>
         </div>
@@ -1353,25 +1377,43 @@
 
     startSlideshow();
 
-    document.getElementById("quoteForm").addEventListener("submit", function (event) {
-      event.preventDefault();
-
+    function getQuoteDetails() {
       const name = document.getElementById("name").value;
       const phone = document.getElementById("phone").value;
       const location = document.getElementById("location").value;
       const service = document.getElementById("service").value;
       const message = document.getElementById("message").value;
 
-      const body = encodeURIComponent(
-        "Quote Request - Macleod Driveway & Stone\n\n" +
+      return (
         "Name: " + name + "\n" +
-        "Phone: " + phone + "\n" +
+        "Phone: " + (phone || "Not provided") + "\n" +
         "Location: " + location + "\n" +
         "Service: " + service + "\n\n" +
         "Project Details:\n" + message
       );
+    }
+
+    document.getElementById("quoteForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      if (!this.reportValidity()) return;
+
+      const body = encodeURIComponent(
+        "Quote Request - Macleod Driveway & Stone\n\n" + getQuoteDetails()
+      );
 
       window.location.href = "sms:17404158886?&body=" + body;
+    });
+
+    document.getElementById("emailQuote").addEventListener("click", function () {
+      const form = document.getElementById("quoteForm");
+      if (!form.reportValidity()) return;
+
+      const subject = encodeURIComponent("Quote Request - Macleod Driveway & Stone");
+      const body = encodeURIComponent(getQuoteDetails());
+
+      window.location.href =
+        "mailto:macleodmaterialhauling@gmail.com?subject=" + subject + "&body=" + body;
     });
   </script>
 </body>
