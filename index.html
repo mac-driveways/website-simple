@@ -1,1 +1,1378 @@
-Hellow World!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Macleod Driveway & Stone | Hocking Hills Gravel, Driveways & Skid-Steer Work</title>
+
+  <meta
+    name="description"
+    content="Macleod Driveway & Stone provides gravel delivery, driveway stone, driveway repair, skid-steer work, grading, cleanup, and rural property services around Hocking Hills."
+  />
+
+  <style>
+    :root {
+      --bg: #050505;
+      --bg-soft: #111111;
+      --card: rgba(255, 255, 255, 0.08);
+      --card-border: rgba(255, 255, 255, 0.16);
+
+      --text: #ffffff;
+      --muted: #d7d7d7;
+
+      --accent: #e31f2b;
+      --accent-dark: #9f111b;
+      --white: #ffffff;
+      --black: #050505;
+
+      --shadow: 0 18px 45px rgba(0,0,0,0.45);
+      --radius: 18px;
+      --max: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(5, 5, 5, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .nav {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 900;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+
+    .brand-logo {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 4px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--white);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 20px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: var(--white);
+      font-weight: 900;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 10px 28px rgba(227, 31, 43, 0.35);
+      transition: transform 0.2s ease, background 0.2s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      font-size: 0.92rem;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      background: #ff2937;
+    }
+
+    .button.secondary {
+      background: rgba(255,255,255,0.1);
+      color: var(--white);
+      box-shadow: none;
+      border: 1px solid rgba(255,255,255,0.18);
+    }
+
+    .hero {
+      position: relative;
+      min-height: 82vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(5,5,5,0.96), rgba(5,5,5,0.78), rgba(5,5,5,0.48)),
+        url("images/hero-driveway.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 75% 22%, rgba(227,31,43,0.28), transparent 32%),
+        linear-gradient(180deg, transparent 70%, var(--bg) 100%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 80px 20px;
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 38px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.78rem;
+      font-weight: 900;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: clamp(2.45rem, 6vw, 5.4rem);
+      line-height: 0.95;
+      margin: 0 0 22px;
+      letter-spacing: -0.06em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      letter-spacing: -0.035em;
+    }
+
+    .hero p {
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 1.15rem;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+.trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 24px;
+  align-items: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+.trust-pill {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0 0 0 16px;
+  border-radius: 0;
+  color: var(--muted);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.055em;
+  font-size: 0.82rem;
+}
+
+.trust-pill::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  transform: translateY(-50%);
+  box-shadow: 0 0 0 4px rgba(227, 31, 43, 0.16);
+}
+
+    .quote-card {
+      background: rgba(17,17,17,0.88);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .quote-slideshow {
+      position: relative;
+      width: 100%;
+      height: 260px;
+      margin: 0 auto 24px;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.16);
+      box-shadow: 0 14px 34px rgba(0,0,0,0.4);
+      background: #111111;
+    }
+
+    .quote-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      background-size: cover;
+      background-position: center;
+      transition: opacity 0.65s ease;
+    }
+
+    .quote-slide.active {
+      opacity: 1;
+    }
+
+    .slide-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.22);
+      background: rgba(0,0,0,0.55);
+      color: var(--white);
+      font-size: 1.6rem;
+      line-height: 1;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      z-index: 2;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .slide-arrow:hover {
+      background: rgba(227,31,43,0.82);
+      transform: translateY(-50%) scale(1.05);
+    }
+
+    .slide-prev {
+      left: 12px;
+    }
+
+    .slide-next {
+      right: 12px;
+    }
+
+    .slide-dots {
+      position: absolute;
+      left: 50%;
+      bottom: 12px;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+      z-index: 2;
+      padding: 7px 9px;
+      border-radius: 999px;
+      background: rgba(0,0,0,0.48);
+      border: 1px solid rgba(255,255,255,0.14);
+    }
+
+    .slide-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      border: none;
+      padding: 0;
+      background: rgba(255,255,255,0.48);
+      cursor: pointer;
+    }
+
+    .slide-dot.active {
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(227,31,43,0.22);
+    }
+
+    .quote-card h2 {
+      margin-top: 0;
+      font-size: 1.45rem;
+      line-height: 1.05;
+    }
+
+    .quote-card p {
+      font-size: 0.96rem;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .quick-list {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .quick-list li {
+      margin-bottom: 6px;
+    }
+
+    section {
+      padding: 84px 20px;
+    }
+
+    .section-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+
+    .section-heading {
+      max-width: 780px;
+      margin-bottom: 36px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      line-height: 1;
+      margin: 0 0 16px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 1.06rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .service-card,
+    .work-card,
+    .contact-card {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: 0 14px 34px rgba(0,0,0,0.24);
+    }
+
+    .service-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::after {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: rgba(227,31,43,0.12);
+    }
+
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: rgba(227,31,43,0.18);
+      color: var(--accent);
+      font-size: 1.35rem;
+      margin-bottom: 14px;
+      font-weight: 900;
+    }
+
+    .service-card h3,
+    .work-card h3 {
+      margin: 0 0 10px;
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+    }
+
+    .service-card p,
+    .work-card p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .feature-sections {
+      padding-top: 18px;
+    }
+
+    .feature-panel {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 470px;
+      margin-bottom: 24px;
+      overflow: hidden;
+      border: 1px solid var(--card-border);
+      border-radius: 26px;
+      background: var(--bg-soft);
+      box-shadow: var(--shadow);
+    }
+
+    .feature-panel.reverse .feature-photo {
+      order: 2;
+    }
+
+    .feature-photo {
+      min-height: 390px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .feature-photo.drainage {
+      background-image:
+        linear-gradient(rgba(5,5,5,0.08), rgba(5,5,5,0.5)),
+        url("images/driveway-drainage.jpg");
+    }
+
+    .feature-photo.delivery {
+      background-image:
+        linear-gradient(rgba(5,5,5,0.08), rgba(5,5,5,0.45)),
+        url("images/tailgate-spreading.jpg");
+    }
+
+    .feature-copy {
+      padding: clamp(28px, 5vw, 54px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .feature-copy h2 {
+      font-size: clamp(1.9rem, 3.5vw, 3rem);
+      line-height: 1;
+      margin: 0 0 18px;
+    }
+
+    .feature-copy p,
+    .feature-list {
+      color: var(--muted);
+    }
+
+    .feature-list {
+      margin: 8px 0 22px;
+      padding-left: 20px;
+    }
+
+    .feature-list li {
+      margin-bottom: 8px;
+    }
+
+    .feature-note {
+      margin: 4px 0 22px;
+      padding: 14px 16px;
+      border-left: 3px solid var(--accent);
+      background: rgba(255,255,255,0.055);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .photo-placeholder {
+      min-height: 430px;
+      border-radius: 26px;
+      background:
+        linear-gradient(rgba(5,5,5,0.12), rgba(5,5,5,0.68)),
+        url("images/skid-steer-work.jpg");
+      background-size: cover;
+      background-position: center;
+      border: 1px solid rgba(255,255,255,0.16);
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: flex-end;
+      padding: 22px;
+    }
+
+    .caption {
+      background: rgba(0,0,0,0.58);
+      border: 1px solid rgba(255,255,255,0.16);
+      backdrop-filter: blur(8px);
+      padding: 14px 16px;
+      border-radius: 16px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .steps {
+      display: grid;
+      gap: 14px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 16px;
+      align-items: start;
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.11);
+    }
+
+    .step-number {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: var(--white);
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+    }
+
+    .step h3 {
+      margin: 0 0 4px;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .work-image {
+      height: 190px;
+      border-radius: 16px;
+      margin-bottom: 16px;
+      background-size: cover;
+      background-position: center;
+      border: 1px solid rgba(255,255,255,0.14);
+      background-color: #1a1a1a;
+    }
+
+    .work-image.one {
+      background-image:
+        linear-gradient(rgba(5,5,5,0.1), rgba(5,5,5,0.42)),
+        url("images/gravel-delivery.jpg");
+    }
+
+    .work-image.two {
+      background-image:
+        linear-gradient(rgba(5,5,5,0.1), rgba(5,5,5,0.42)),
+        url("images/driveway-repair.jpg");
+    }
+
+    .work-image.three {
+      background-image:
+        linear-gradient(rgba(5,5,5,0.1), rgba(5,5,5,0.42)),
+        url("images/property-cleanup.jpg");
+    }
+
+    .area-band {
+      background:
+        linear-gradient(135deg, rgba(227,31,43,0.72), rgba(5,5,5,0.92)),
+        url("images/topo-texture.jpg");
+      background-size: cover;
+      background-position: center;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .area-content {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .area-content h2 {
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      line-height: 1;
+      margin: 0 0 16px;
+    }
+
+    .area-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .area-list span {
+      background: rgba(0,0,0,0.32);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 999px;
+      padding: 8px 12px;
+      color: var(--white);
+      font-weight: 700;
+    }
+
+    .contact {
+      background:
+        linear-gradient(rgba(5,5,5,0.94), rgba(5,5,5,0.98)),
+        url("images/topo-texture.jpg");
+      background-size: cover;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 24px;
+    }
+
+    .contact-card h2,
+    .contact-card h3 {
+      margin-top: 0;
+    }
+
+    .contact-card a {
+      color: var(--white);
+      font-weight: 900;
+      border-bottom: 2px solid var(--accent);
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+    }
+
+    label {
+      font-weight: 800;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 13px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(0,0,0,0.28);
+      color: var(--text);
+      font-size: 1rem;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #a8a8a8;
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .small-note {
+      color: var(--muted);
+      font-size: 0.88rem;
+      margin-top: 8px;
+    }
+
+    footer {
+      padding: 26px 20px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      color: var(--muted);
+      background: #030303;
+    }
+
+    .footer-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner,
+      .split,
+      .area-content,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid,
+      .feature-panel,
+      .work-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .quote-card {
+        max-width: 520px;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .brand span {
+        font-size: 0.85rem;
+      }
+
+      .brand-logo {
+        width: 48px;
+        height: 48px;
+      }
+
+      .services-grid,
+      .work-grid,
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 64px 18px;
+      }
+
+      .quote-card {
+        padding: 22px;
+      }
+
+      .quote-slideshow {
+        height: 220px;
+      }
+
+      .slide-arrow {
+        width: 34px;
+        height: 34px;
+      }
+
+      .hero-actions .button {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .feature-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-panel.reverse .feature-photo {
+        order: 0;
+      }
+
+      .feature-photo {
+        min-height: 290px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a href="#" class="brand">
+        <img class="brand-logo" src="images/macleod-logo.png" alt="Macleod Driveway & Stone logo" />
+        <span>Macleod Driveway & Stone</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#drainage">Drainage</a>
+        <a href="#delivery">Delivery</a>
+        <a href="#process">How It Works</a>
+        <a href="#work">Recent Work</a>
+        <a href="#contact">Get a Quote</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <div class="eyebrow">Veteran Owned & Operated • Est. 2017</div>
+
+          <h1>Driveway stone, gravel, and skid-steer work in Hocking Hills.</h1>
+
+          <p>
+            Macleod Driveway & Stone helps property owners with gravel delivery,
+            driveway repair, stone spreading, grading, cleanup, and practical rural
+            property improvements around Hocking Hills and the surrounding area.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button" href="tel:17404158886">Call 740-415-8886</a>
+            <a class="button secondary" href="#contact">Request a Quote</a>
+          </div>
+
+          <div class="trust-row">
+            <span class="trust-pill">Veteran owned</span>
+            <span class="trust-pill">Driveway stone</span>
+            <span class="trust-pill">Gravel delivery</span>
+            <span class="trust-pill">Skid-steer work</span>
+          </div>
+        </div>
+
+        <aside class="quote-card">
+          <div class="quote-slideshow" aria-label="Macleod Driveway & Stone work photos">
+            <div
+              class="quote-slide active"
+              role="img"
+              aria-label="Finished driveway stone work by Macleod Driveway & Stone"
+              style="background-image: linear-gradient(rgba(5,5,5,0.05), rgba(5,5,5,0.18)), url('images/hero-drive.jpg');"
+            ></div>
+
+            <div
+              class="quote-slide"
+              role="img"
+              aria-label="Gravel delivery by Macleod Driveway & Stone"
+              style="background-image: linear-gradient(rgba(5,5,5,0.05), rgba(5,5,5,0.18)), url('images/gravel-delivery.jpg');"
+            ></div>
+
+            <div
+              class="quote-slide"
+              role="img"
+              aria-label="Driveway repair and stone resurfacing by Macleod Driveway & Stone"
+              style="background-image: linear-gradient(rgba(5,5,5,0.05), rgba(5,5,5,0.18)), url('images/driveway-repair.jpg');"
+            ></div>
+
+            <div
+              class="quote-slide"
+              role="img"
+              aria-label="Property cleanup and skid-steer work by Macleod Driveway & Stone"
+              style="background-image: linear-gradient(rgba(5,5,5,0.05), rgba(5,5,5,0.18)), url('images/property-cleanup.jpg');"
+            ></div>
+
+            <button class="slide-arrow slide-prev" type="button" aria-label="Previous work photo">‹</button>
+            <button class="slide-arrow slide-next" type="button" aria-label="Next work photo">›</button>
+
+            <div class="slide-dots" aria-label="Choose work photo">
+              <button class="slide-dot active" type="button" aria-label="Show photo 1" data-slide-index="0"></button>
+              <button class="slide-dot" type="button" aria-label="Show photo 2" data-slide-index="1"></button>
+              <button class="slide-dot" type="button" aria-label="Show photo 3" data-slide-index="2"></button>
+              <button class="slide-dot" type="button" aria-label="Show photo 4" data-slide-index="3"></button>
+            </div>
+          </div>
+
+          <h2>Need stone, gravel, or driveway work?</h2>
+
+          <p>
+            Call or send a few details about the job. We can help figure out the
+            right material, access needs, and best next step.
+          </p>
+
+          <ul class="quick-list">
+            <li>Driveway stone and gravel delivery</li>
+            <li>Drainage-focused driveway improvements</li>
+            <li>Stone spreading and resurfacing</li>
+            <li>Skid-steer and small grading work</li>
+            <li>Rural property cleanup and improvements</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="section-inner">
+        <div class="section-heading">
+          <div class="eyebrow">What We Do</div>
+
+          <h2>Stone, gravel, and property work for rough driveways and rural sites.</h2>
+
+          <p>
+            Whether the job is a fresh load of driveway stone, a rough lane that needs reshaped,
+            or a property that needs cleanup and skid-steer work, the goal is simple:
+            make the site more usable, cleaner, and easier to access.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon">▰</div>
+            <h3>Driveway Stone</h3>
+            <p>
+              Stone for driveways, lanes, parking areas, cabin access, and rural properties.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">▣</div>
+            <h3>Gravel Delivery</h3>
+            <p>
+              Gravel and stone delivery for property owners who need material brought directly to the job.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">↗</div>
+            <h3>Driveway Repair</h3>
+            <p>
+              Help with potholes, ruts, washouts, soft spots, drainage problems, and difficult access.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">≋</div>
+            <h3>Stone Spreading</h3>
+            <p>
+              Spreading and shaping stone so the driveway, lane, or parking area is more usable.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">⛏</div>
+            <h3>Skid-Steer Work</h3>
+            <p>
+              Light grading, moving material, cleanup, spreading gravel, and small site improvements.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">♻</div>
+            <h3>Property Cleanup</h3>
+            <p>
+              Help cleaning up junk piles, scrap, brush, dumped material, and neglected property areas.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-sections" aria-label="Driveway drainage and material delivery options">
+      <div class="section-inner">
+        <article id="drainage" class="feature-panel">
+          <div
+            class="feature-photo drainage"
+            role="img"
+            aria-label="Driveway drainage and grading work"
+          ></div>
+
+          <div class="feature-copy">
+            <div class="eyebrow">Driveway Drainage</div>
+            <h2>A better driveway starts with proper drainage.</h2>
+
+            <p>
+              Water is one of the biggest causes of driveway damage. When it runs down the
+              drive or collects in low areas, it can wash away stone, create potholes, and
+              soften the base. We look at the driveway and surrounding terrain to identify
+              practical ways to help water move away from the traveled surface.
+            </p>
+
+            <ul class="feature-list">
+              <li>Reshaping and crowning to help shed water</li>
+              <li>Correcting low areas where water collects</li>
+              <li>Restoring roadside ditches and swales</li>
+              <li>Cleaning around existing culverts</li>
+              <li>Stabilizing soft or frequently washed-out areas</li>
+            </ul>
+
+            <div class="feature-note">
+              Drainage improvements are based on visible site conditions and practical
+              construction experience. Engineered drainage design, permitting, and work
+              within regulated waterways are not included unless specifically arranged.
+            </div>
+
+            <div><a class="button" href="#contact">Request a Driveway Evaluation</a></div>
+          </div>
+        </article>
+
+        <article id="delivery" class="feature-panel reverse">
+          <div
+            class="feature-photo delivery"
+            role="img"
+            aria-label="Gravel truck tailgate spreading stone on a driveway"
+          ></div>
+
+          <div class="feature-copy">
+            <div class="eyebrow">Material Delivery</div>
+            <h2>Stone delivered the way your project needs it.</h2>
+
+            <p>
+              Need material without a complete driveway rebuild? We can coordinate and
+              deliver gravel and stone for driveways, parking areas, cabin access,
+              drainage improvements, and other rural property projects.
+            </p>
+
+            <ul class="feature-list">
+              <li><strong>Dump delivery:</strong> Material placed in an accessible location</li>
+              <li><strong>Tailgate spreading:</strong> Stone distributed along the driveway as the truck moves</li>
+              <li><strong>Delivery and grading:</strong> Material spread, shaped, and finished with equipment</li>
+              <li><strong>Multiple-load projects:</strong> Coordinated deliveries for larger jobs</li>
+            </ul>
+
+            <p>
+              Not sure what material or how much you need? Tell us what you are trying to
+              accomplish and we can help estimate the material, access needs, and best
+              delivery approach.
+            </p>
+
+            <div class="feature-note">
+              Availability and pricing depend on the material source, delivery distance,
+              quantity, truck access, and current road and site conditions.
+            </div>
+
+            <div><a class="button" href="#contact">Ask About Delivery</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="section-inner split">
+        <div class="photo-placeholder">
+          <div class="caption">
+            Compacting gravel can extend the life of your driveway and help to avoid those pesky potholes.
+          </div>
+        </div>
+
+        <div>
+          <div class="section-heading">
+            <div class="eyebrow">Simple Process</div>
+
+            <h2>Tell us what you are trying to fix.</h2>
+
+            <p>
+              Customers do not always know the exact stone, equipment, or amount of material they need.
+              That is okay. Start with the problem, and we can help determine the practical next step.
+            </p>
+          </div>
+
+          <div class="steps">
+            <div class="step">
+              <div class="step-number">1</div>
+              <div>
+                <h3>Describe the job</h3>
+                <p>
+                  Tell us where the job is, what the driveway or property looks like,
+                  and what problem you want fixed.
+                </p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">2</div>
+              <div>
+                <h3>Figure out the material</h3>
+                <p>
+                  We help think through stone type, access, spreading, grading,
+                  and whether the job needs a site visit.
+                </p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">3</div>
+              <div>
+                <h3>Schedule the work</h3>
+                <p>
+                  Once the scope is clear, we line up the material, equipment,
+                  timing, and practical plan to get it done.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="section-inner">
+        <div class="section-heading">
+          <div class="eyebrow">Recent Work</div>
+
+          <h2>Real work photos will sell this better than anything.</h2>
+
+          <p>
+            These are placeholders for now. Later, replace them with real job photos,
+            short videos, before-and-after examples, and customer projects.
+          </p>
+        </div>
+
+        <div class="work-grid">
+          <article class="work-card">
+            <div class="work-image one"></div>
+            <h3>Gravel Delivery</h3>
+            <p>
+              Delivery for driveways, parking pads, rural lanes, cabin access,
+              and property improvement projects.
+            </p>
+          </article>
+
+          <article class="work-card">
+            <div class="work-image two"></div>
+            <h3>Driveway Resurfacing</h3>
+            <p>
+              Rework rough areas, spread stone, improve access,
+              and clean up problem spots.
+            </p>
+          </article>
+
+          <article class="work-card">
+            <div class="work-image three"></div>
+            <h3>Property Cleanup</h3>
+            <p>
+              Skid-steer support for junk piles, scrap, brush, old materials,
+              and neglected areas.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="area-band">
+      <div class="area-content">
+        <div>
+          <div class="eyebrow">Service Area</div>
+
+          <h2>Serving Hocking Hills and surrounding communities.</h2>
+
+          <p style="color: var(--muted);">
+            This mockup can be adjusted around the actual towns and counties
+            Macleod wants to serve. For local SEO, each major area can eventually
+            get its own page.
+          </p>
+        </div>
+
+        <div class="area-list">
+          <span>Hocking Hills</span>
+          <span>Logan</span>
+          <span>Laurelville</span>
+          <span>Nelsonville</span>
+          <span>Lancaster</span>
+          <span>New Plymouth</span>
+          <span>Cabin Properties</span>
+          <span>Rural Driveways</span>
+          <span>Hunting Land</span>
+          <span>Small Land Projects</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="section-inner contact-grid">
+        <div class="contact-card">
+          <div class="eyebrow">Get a Quote</div>
+
+          <h2>Call or send project details.</h2>
+
+          <p style="color: var(--muted);">
+            For the first GitHub mockup, this form opens a text message with the quote request.
+            Later, the form can be connected to Formspree, Netlify Forms, Google Sheets,
+            or a simple CRM.
+          </p>
+
+          <p>
+            <strong>Phone:</strong> <a href="tel:17404158886">740-415-8886</a><br />
+            <strong>Business:</strong> Macleod Driveway & Stone<br />
+            <strong>Established:</strong> 2017<br />
+            <strong>Owned:</strong> Veteran Owned & Operated
+          </p>
+
+          <p class="small-note">
+            Tip: Replace the placeholder images with actual photos before sharing this widely.
+            Real photos of the truck, equipment, gravel, and finished driveways will make this much stronger.
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <form id="quoteForm">
+            <div class="form-row">
+              <div>
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required />
+              </div>
+
+              <div>
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" placeholder="Your phone number" required />
+              </div>
+            </div>
+
+            <div>
+              <label for="location">Job Location</label>
+              <input id="location" name="location" type="text" placeholder="Town, road, or general area" />
+            </div>
+
+            <div>
+              <label for="service">What do you need?</label>
+              <select id="service" name="service">
+                <option>Driveway stone</option>
+                <option>Gravel delivery</option>
+                <option>Driveway repair</option>
+                <option>Driveway drainage improvements</option>
+                <option>Dump delivery only</option>
+                <option>Tailgate spreading</option>
+                <option>Delivery and grading</option>
+                <option>Stone spreading</option>
+                <option>Skid-steer work</option>
+                <option>Property cleanup</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="message">Project Details</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Describe the driveway, cleanup area, access, material needed, timing, or anything else helpful."
+              ></textarea>
+            </div>
+
+            <button class="button" type="submit">Text Quote Request</button>
+
+            <p class="small-note">
+              This demo form opens a text message to 740-415-8886. No information is stored on GitHub.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>© <span id="year"></span> Macleod Driveway & Stone. All rights reserved.</div>
+      <div>Driveway Stone • Drainage Improvements • Gravel Delivery • Skid-Steer Work</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const slides = Array.from(document.querySelectorAll(".quote-slide"));
+    const dots = Array.from(document.querySelectorAll(".slide-dot"));
+    const prevButton = document.querySelector(".slide-prev");
+    const nextButton = document.querySelector(".slide-next");
+    let currentSlide = 0;
+    let slideTimer;
+
+    function showSlide(index) {
+      if (!slides.length) return;
+
+      currentSlide = (index + slides.length) % slides.length;
+
+      slides.forEach((slide, slideIndex) => {
+        slide.classList.toggle("active", slideIndex === currentSlide);
+      });
+
+      dots.forEach((dot, dotIndex) => {
+        dot.classList.toggle("active", dotIndex === currentSlide);
+      });
+    }
+
+    function startSlideshow() {
+      clearInterval(slideTimer);
+      slideTimer = setInterval(() => {
+        showSlide(currentSlide + 1);
+      }, 4500);
+    }
+
+    prevButton?.addEventListener("click", () => {
+      showSlide(currentSlide - 1);
+      startSlideshow();
+    });
+
+    nextButton?.addEventListener("click", () => {
+      showSlide(currentSlide + 1);
+      startSlideshow();
+    });
+
+    dots.forEach((dot) => {
+      dot.addEventListener("click", () => {
+        showSlide(Number(dot.dataset.slideIndex));
+        startSlideshow();
+      });
+    });
+
+    startSlideshow();
+
+    document.getElementById("quoteForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const phone = document.getElementById("phone").value;
+      const location = document.getElementById("location").value;
+      const service = document.getElementById("service").value;
+      const message = document.getElementById("message").value;
+
+      const body = encodeURIComponent(
+        "Quote Request - Macleod Driveway & Stone\n\n" +
+        "Name: " + name + "\n" +
+        "Phone: " + phone + "\n" +
+        "Location: " + location + "\n" +
+        "Service: " + service + "\n\n" +
+        "Project Details:\n" + message
+      );
+
+      window.location.href = "sms:17404158886?&body=" + body;
+    });
+  </script>
+</body>
+</html>
