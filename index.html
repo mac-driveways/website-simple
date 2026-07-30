@@ -826,6 +826,22 @@
       font-size: 0.9rem;
     }
 
+    .footer-service-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .footer-service-links a {
+      color: var(--muted);
+      transition: color 0.2s ease;
+    }
+
+    .footer-service-links a:hover {
+      color: var(--white);
+    }
+
     @media (max-width: 900px) {
       .hero-inner,
       .split,
@@ -911,17 +927,17 @@
 <body>
   <header class="site-header">
     <nav class="nav">
-      <a href="#" class="brand">
+      <a href="/" class="brand">
         <img class="brand-logo" src="images/macleod-logo.png" alt="MacLeod Driveway & Stone logo" />
         <span>MacLeod Driveway & Stone</span>
       </a>
 
       <div class="nav-links">
         <a href="#services">Services</a>
-        <a href="#drainage">Drainage</a>
-        <a href="#delivery">Delivery</a>
-        <a href="#process">How It Works</a>
-        <a href="#work">Recent Work</a>
+        <a href="gravel-delivery-logan-ohio/">Gravel Delivery</a>
+        <a href="gravel-driveway-repair/">Driveway Repair</a>
+        <a href="driveway-drainage/">Drainage</a>
+        <a href="light-excavation/">Excavation</a>
         <a href="#contact">Get a Quote</a>
       </div>
     </nav>
@@ -1049,7 +1065,7 @@
               <div class="service-kicker">MacLeod Services</div>
               <h3>Gravel Delivery</h3>
               <p>Gravel and stone delivery for property owners who need material brought directly to the job.</p>
-              <a class="service-link" href="#contact" data-service="Gravel delivery">Ask About This Service</a>
+              <a class="service-link" href="gravel-delivery-logan-ohio/">Learn About Gravel Delivery</a>
             </div>
           </article>
 
@@ -1061,7 +1077,7 @@
               <div class="service-kicker">MacLeod Services</div>
               <h3>Driveway Repair</h3>
               <p>Help with potholes, ruts, washouts, soft spots, drainage problems, and difficult access.</p>
-              <a class="service-link" href="#contact" data-service="Driveway repair">Ask About This Service</a>
+              <a class="service-link" href="gravel-driveway-repair/">Learn About Driveway Repair</a>
             </div>
           </article>
 
@@ -1097,7 +1113,7 @@
               <div class="service-kicker">MacLeod Services</div>
               <h3>Light Excavation</h3>
               <p>Small digging, grading, drainage, and site-preparation tasks suited to skid-steer or mini-excavator equipment.</p>
-              <a class="service-link" href="#contact" data-service="Light excavation">Ask About This Service</a>
+              <a class="service-link" href="light-excavation/">Learn About Light Excavation</a>
             </div>
           </article>
         </div>
@@ -1139,8 +1155,8 @@
             </div>
 
             <div>
-              <a class="button" href="#contact" data-service="Driveway drainage improvements">
-                Request a Drainage Evaluation
+              <a class="button" href="driveway-drainage/">
+                Explore Driveway Drainage
               </a>
             </div>
           </div>
@@ -1182,7 +1198,7 @@
             </div>
 
             <div>
-              <a class="button" href="#contact" data-service="Gravel delivery">Ask About Delivery</a>
+              <a class="button" href="gravel-delivery-logan-ohio/">Explore Gravel Delivery</a>
             </div>
           </div>
         </article>
@@ -1403,7 +1419,15 @@
   <footer>
     <div class="footer-inner">
       <div>© <span id="year"></span> MacLeod Driveway & Stone. All rights reserved.</div>
-      <div>Driveway Repairs • Drainage Improvements • Gravel Delivery • Light Excavation</div>
+      <div class="footer-service-links">
+        <a href="gravel-delivery-logan-ohio/">Gravel Delivery</a>
+        <span>•</span>
+        <a href="gravel-driveway-repair/">Driveway Repair</a>
+        <span>•</span>
+        <a href="driveway-drainage/">Drainage Improvements</a>
+        <span>•</span>
+        <a href="light-excavation/">Light Excavation</a>
+      </div>
     </div>
   </footer>
 
